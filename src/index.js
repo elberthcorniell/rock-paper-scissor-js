@@ -1,71 +1,64 @@
-import { Group, Task } from './js/task';
-import mountTab from './js/layout';
-import {
-  handleChange,
-  getState,
-  getTab,
-  getParam,
-  b64ToUtf8,
-} from './js/utils';
+import Phaser from 'phaser';
 
-mountTab();
+const BootScene = new Phaser.Class({
+ 
+  Extends: Phaser.Scene,
 
-switch (getTab()) {
-  case 1:
-  default: {
-    const newGroup = document.getElementById('newGroupForm');
-    const { childNodes: groupFields } = newGroup;
+  initialize:
 
-    for (let i = 0; i < groupFields.length; i += 1) {
-      if (groupFields[i].localName === 'input') {
-        groupFields[i].addEventListener('input', handleChange);
-      }
-    }
+  function BootScene ()
+  {
+      Phaser.Scene.call(this, { key: 'BootScene' });
+  },
 
-    newGroup.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const { TitleGroupField: title, DescriptionGroupField: description } = getState();
-      const group = new Group({ title, description });
-      group.save();
-      window.location.reload();
-    });
-    break;
+  preload: function ()
+  {
+      // load the resources here
+  },
+
+  create: function ()
+  {
+      this.scene.start('WorldScene');
   }
-  case 2: {
-    const newTask = document.getElementById('newTaskForm');
-    const { childNodes: taskFields } = newTask;
-    for (let i = 0; i < taskFields.length; i += 1) {
-      if (taskFields[i].localName === 'input') {
-        taskFields[i].addEventListener('input', handleChange);
-      }
-    }
+});
 
-    newTask.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const {
-        TitleTaskField: title,
-        DescriptionTaskField: description,
-        dateTaskField: dueDate,
-        priorityTaskField: priority,
-      } = getState();
-      const task = new Task({
-        title, description, dueDate, priority,
-      });
-      task.save();
-      window.location.reload();
-    });
-    break;
+const WorldScene = new Phaser.Class({
+ 
+  Extends: Phaser.Scene,
+
+  initialize:
+
+  function WorldScene ()
+  {
+      Phaser.Scene.call(this, { key: 'WorldScene' });
+  },
+  preload: function ()
+  {
+      
+  },
+  create: function ()
+  {
+      // create your world here
   }
-}
+});
 
-if (localStorage.getItem('groups') === null) {
-  localStorage.setItem('groups', JSON.stringify([{ title: 'default', description: 'For general tasks' }]));
-  mountTab();
-}
+const config = {
+  type: Phaser.AUTO,
+  parent: 'content',
+  width: 320,
+  height: 240,
+  zoom: 2,
+  pixelArt: true,
+  physics: {
+      default: 'arcade',
+      arcade: {
+          gravity: { y: 0 }
+      }
+  },
+  scene: [
+      BootScene,
+      WorldScene
+  ]
+};
 
-if (getParam('delete')) {
-  const item = JSON.parse(b64ToUtf8(getParam('delete')));
-  const task = new Task(item);
-  task.delete();
-  mountTab();
-}
+const game = new Phaser.Game(config);
