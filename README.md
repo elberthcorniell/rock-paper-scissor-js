@@ -1,4 +1,4 @@
-# Task Manager Js - Frontend
+# Rock, Pape, Scissors Js - RPG Game
 
 > An easy way to manage tasks for groups. Built using JavaScript
 
