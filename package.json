@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "webpack": "webpack --watch",
-    "dev": "webpack --mode development",
+    "dev": "webpack --mode development --watch",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -32,6 +32,7 @@
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
     "jest": "^26.6.3",
-    "phaser": "^3.50.1"
+    "phaser": "^3.50.1",
+    "phaser-tiled-json-external-loader": "^0.1.0"
   }
 }
