@@ -1,0 +1,50 @@
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 70px;
+}
+
+button {
+  display: inline;
+  margin: 20px 10px 20px 0;
+}
+
+a {
+  margin-right: 10px;
+}
+
+nav {
+  height: 50px;
+}
+
+input {
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  padding: 0 10px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #f3f5f7;
+}
+
+input[type=submit] {
+  background-color: green;
+  color: white;
+}
+
+.home {
+  background-image: url("./images/tuna-salad.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px;
+  height: calc(100vh - 50px);
+}
+
+.home-title {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50vw;
+}
