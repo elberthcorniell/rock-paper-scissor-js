@@ -50,9 +50,7 @@ export default class BattleUI extends Phaser.Scene {
         
         this.message = new Message(this, this.battleScene.events);
         this.add.existing(this.message);
-    }
 
-    update() {
 
     }
 

@@ -3,18 +3,28 @@ import Phaser from 'phaser';
 export const Unit = new Phaser.Class({
     Extends: Phaser.GameObjects.Sprite,
     initialize: function Unit(scene, x, y, texture, frame, type, hp, damage) {
-        Phaser.GameObjects.Sprite.call(this, scene, x, y, texture, frame);
+        Phaser.GameObjects.Sprite.call(this, scene, x, y, texture, frame)
         this.type = type;
         this.maxHp = this.hp = hp;
-        this.damage = damage; // default damage                
+        this.damage = damage;
+        this.living = true;
+        this.menuItem = null;
     },
-
+    setMenuItem: function (item) {
+        this.menuItem = item;
+    },
     attack: function (target) {
-        target.takeDamage(this.damage);
+        if (target.living)
+            target.takeDamage(this.damage);
     },
-
     takeDamage: function (damage) {
         this.hp -= damage;
+        if (this.hp <= 0) {
+            this.hp = 0;
+            this.living = false;
+            this.visible = false;
+            this.menuItem = null;
+        }
     }
 });
 
@@ -41,8 +51,8 @@ const MenuItem = new Phaser.Class({
     Extends: Phaser.GameObjects.Text,
 
     initialize: function MenuItem(x, y, text, scene) {
-            Phaser.GameObjects.Text.call(this, scene, x, y, text, { color: '#ffffff', align: 'left', fontSize: 15 });
-        },
+        Phaser.GameObjects.Text.call(this, scene, x, y, text, { color: '#ffffff', align: 'left', fontSize: 15 });
+    },
 
     select: function () {
         this.setColor('#f8ff38');
