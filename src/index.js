@@ -8,11 +8,15 @@ const game = new Phaser.Game({
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: { y: 0 }
+      gravity: { y: 0 },
+      // debug: true
     }
   },
   scene: [
     Preloader,
     GameScene,
   ],
+  scale: {
+    zoom: 2
+  }
 })
