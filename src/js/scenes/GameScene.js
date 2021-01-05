@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { createPlayer } from './utils';
 // const cursors = Phaser.Types?.Input?.Keyboard?.CursorKeys;
 
 export default class GameScene extends Phaser.Scene {
@@ -17,47 +18,10 @@ export default class GameScene extends Phaser.Scene {
         map.createLayer('floor', tileset, 0, 0);
 
         wallsLayer.setCollisionByProperty({ colides: true });
-        this.player = this.physics.add.sprite(128, 128, 'player', 'character/003.png');
-        this.player.body.setSize(this.player.width, this.player.height * 0.8);
-        this.player.body.offset.y = 8;
 
-        this.anims.create({
-            key: 'player-idle-side',
-            frames: [{ key: 'player', frame: 'character/000.png' }]
-        });
+        this.player = createPlayer(this, 'player');
 
-        this.anims.create({
-            key: 'player-idle-up',
-            frames: [{ key: 'player', frame: 'character/001.png' }]
-        })
-
-        this.anims.create({
-            key: 'player-idle-down',
-            frames: [{ key: 'player', frame: 'character/003.png' }]
-        })
-
-        this.anims.create({
-            key: 'player-run-down',
-            frames: this.anims.generateFrameNames('player', { start: 66, end: 71, prefix: 'character/0', suffix: '.png' }),
-            repeat: -1,
-            frameRate: 10
-        });
-
-        this.anims.create({
-            key: 'player-run-up',
-            frames: this.anims.generateFrameNames('player', { start: 54, end: 59, prefix: 'character/0', suffix: '.png' }),
-            repeat: -1,
-            frameRate: 10
-        });
-
-        this.anims.create({
-            key: 'player-run-side',
-            frames: this.anims.generateFrameNames('player', { start: 48, end: 53, prefix: 'character/0', suffix: '.png' }),
-            repeat: -1,
-            frameRate: 10
-        });
-
-        this.player.anims.play('player-idle-down');
+        
         this.physics.add.collider(this.player, wallsLayer);
         this.cameras.main.startFollow(this.player, true)
 

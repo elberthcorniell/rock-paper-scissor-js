@@ -16,7 +16,7 @@ export default class BattleScene extends Phaser.Scene {
         this.player = new PlayerCharacter(this, 250, 50, 'player', 'character/000.png', '', 100, 20);
         this.add.existing(this.player);
 
-        this.enemy = new Enemy(this, 50, 50, 'dragonblue', null, 'Dragon', 50, 3);
+        this.enemy = new Enemy(this, 50, 50, 'alex', 'alex/000.png', '', 50, 3);
         this.add.existing(this.enemy);
 
         this.units = [this.player, this.enemy];
