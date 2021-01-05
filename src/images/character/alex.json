@@ -1,0 +1,1840 @@
+{
+  "frames": [
+    {
+      "filename": "alex/032.png",
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 9,
+        "w": 16,
+        "h": 23
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/033.png",
+      "frame": {
+        "x": 0,
+        "y": 23,
+        "w": 16,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 9,
+        "w": 16,
+        "h": 23
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/044.png",
+      "frame": {
+        "x": 0,
+        "y": 46,
+        "w": 16,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 9,
+        "w": 16,
+        "h": 23
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/045.png",
+      "frame": {
+        "x": 0,
+        "y": 69,
+        "w": 16,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 9,
+        "w": 16,
+        "h": 23
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/055.png",
+      "frame": {
+        "x": 0,
+        "y": 92,
+        "w": 16,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 9,
+        "w": 16,
+        "h": 23
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/058.png",
+      "frame": {
+        "x": 0,
+        "y": 115,
+        "w": 16,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 9,
+        "w": 16,
+        "h": 23
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/149.png",
+      "frame": {
+        "x": 0,
+        "y": 138,
+        "w": 15,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 9,
+        "w": 15,
+        "h": 23
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/150.png",
+      "frame": {
+        "x": 0,
+        "y": 161,
+        "w": 15,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 9,
+        "w": 15,
+        "h": 23
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/026.png",
+      "frame": {
+        "x": 0,
+        "y": 184,
+        "w": 14,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 9,
+        "w": 14,
+        "h": 23
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/027.png",
+      "frame": {
+        "x": 0,
+        "y": 207,
+        "w": 14,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 9,
+        "w": 14,
+        "h": 23
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/038.png",
+      "frame": {
+        "x": 0,
+        "y": 230,
+        "w": 14,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 9,
+        "w": 14,
+        "h": 23
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/039.png",
+      "frame": {
+        "x": 0,
+        "y": 253,
+        "w": 14,
+        "h": 23
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 9,
+        "w": 14,
+        "h": 23
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/001.png",
+      "frame": {
+        "x": 0,
+        "y": 276,
+        "w": 16,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 16,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/003.png",
+      "frame": {
+        "x": 14,
+        "y": 184,
+        "w": 16,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 16,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/046.png",
+      "frame": {
+        "x": 15,
+        "y": 138,
+        "w": 16,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 16,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/047.png",
+      "frame": {
+        "x": 15,
+        "y": 160,
+        "w": 16,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 16,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/054.png",
+      "frame": {
+        "x": 14,
+        "y": 206,
+        "w": 15,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 15,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/056.png",
+      "frame": {
+        "x": 14,
+        "y": 228,
+        "w": 15,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 15,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/057.png",
+      "frame": {
+        "x": 14,
+        "y": 250,
+        "w": 15,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 15,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/059.png",
+      "frame": {
+        "x": 16,
+        "y": 0,
+        "w": 15,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 15,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/066.png",
+      "frame": {
+        "x": 16,
+        "y": 22,
+        "w": 15,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 9,
+        "w": 15,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/067.png",
+      "frame": {
+        "x": 16,
+        "y": 44,
+        "w": 15,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 15,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/068.png",
+      "frame": {
+        "x": 16,
+        "y": 66,
+        "w": 15,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 9,
+        "w": 15,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/069.png",
+      "frame": {
+        "x": 16,
+        "y": 88,
+        "w": 15,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 9,
+        "w": 15,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/070.png",
+      "frame": {
+        "x": 16,
+        "y": 110,
+        "w": 15,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 15,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/071.png",
+      "frame": {
+        "x": 0,
+        "y": 298,
+        "w": 15,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 9,
+        "w": 15,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/144.png",
+      "frame": {
+        "x": 0,
+        "y": 320,
+        "w": 15,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 15,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/145.png",
+      "frame": {
+        "x": 0,
+        "y": 342,
+        "w": 15,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 15,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/146.png",
+      "frame": {
+        "x": 0,
+        "y": 364,
+        "w": 15,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 15,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/147.png",
+      "frame": {
+        "x": 0,
+        "y": 386,
+        "w": 15,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 15,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/151.png",
+      "frame": {
+        "x": 0,
+        "y": 408,
+        "w": 15,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 15,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/152.png",
+      "frame": {
+        "x": 0,
+        "y": 430,
+        "w": 15,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 15,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/000.png",
+      "frame": {
+        "x": 0,
+        "y": 452,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/002.png",
+      "frame": {
+        "x": 0,
+        "y": 474,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/024.png",
+      "frame": {
+        "x": 0,
+        "y": 496,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/028.png",
+      "frame": {
+        "x": 0,
+        "y": 518,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/029.png",
+      "frame": {
+        "x": 0,
+        "y": 540,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/040.png",
+      "frame": {
+        "x": 0,
+        "y": 562,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/041.png",
+      "frame": {
+        "x": 0,
+        "y": 584,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/048.png",
+      "frame": {
+        "x": 0,
+        "y": 606,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/049.png",
+      "frame": {
+        "x": 0,
+        "y": 628,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 9,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/051.png",
+      "frame": {
+        "x": 0,
+        "y": 650,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/052.png",
+      "frame": {
+        "x": 0,
+        "y": 672,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 9,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/060.png",
+      "frame": {
+        "x": 0,
+        "y": 694,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/061.png",
+      "frame": {
+        "x": 0,
+        "y": 716,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 9,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/062.png",
+      "frame": {
+        "x": 0,
+        "y": 738,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/063.png",
+      "frame": {
+        "x": 0,
+        "y": 760,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/064.png",
+      "frame": {
+        "x": 0,
+        "y": 782,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 9,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/122.png",
+      "frame": {
+        "x": 0,
+        "y": 804,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 9,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/123.png",
+      "frame": {
+        "x": 0,
+        "y": 826,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 9,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/128.png",
+      "frame": {
+        "x": 0,
+        "y": 848,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 9,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/129.png",
+      "frame": {
+        "x": 0,
+        "y": 870,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 9,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/120.png",
+      "frame": {
+        "x": 0,
+        "y": 892,
+        "w": 14,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 10,
+        "w": 14,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/124.png",
+      "frame": {
+        "x": 0,
+        "y": 913,
+        "w": 14,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 10,
+        "w": 14,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/125.png",
+      "frame": {
+        "x": 0,
+        "y": 934,
+        "w": 14,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 10,
+        "w": 14,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/126.png",
+      "frame": {
+        "x": 0,
+        "y": 955,
+        "w": 14,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 14,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/130.png",
+      "frame": {
+        "x": 0,
+        "y": 976,
+        "w": 14,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 14,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/131.png",
+      "frame": {
+        "x": 0,
+        "y": 997,
+        "w": 14,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 14,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/050.png",
+      "frame": {
+        "x": 0,
+        "y": 452,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/030.png",
+      "frame": {
+        "x": 0,
+        "y": 276,
+        "w": 16,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 16,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/031.png",
+      "frame": {
+        "x": 0,
+        "y": 276,
+        "w": 16,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 16,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/034.png",
+      "frame": {
+        "x": 0,
+        "y": 276,
+        "w": 16,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 16,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/035.png",
+      "frame": {
+        "x": 0,
+        "y": 276,
+        "w": 16,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 16,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/036.png",
+      "frame": {
+        "x": 0,
+        "y": 474,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/037.png",
+      "frame": {
+        "x": 0,
+        "y": 474,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/065.png",
+      "frame": {
+        "x": 0,
+        "y": 474,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/042.png",
+      "frame": {
+        "x": 14,
+        "y": 184,
+        "w": 16,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 16,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/043.png",
+      "frame": {
+        "x": 14,
+        "y": 184,
+        "w": 16,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 16,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/025.png",
+      "frame": {
+        "x": 0,
+        "y": 496,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/053.png",
+      "frame": {
+        "x": 0,
+        "y": 496,
+        "w": 14,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 14,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/121.png",
+      "frame": {
+        "x": 0,
+        "y": 892,
+        "w": 14,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 10,
+        "w": 14,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/127.png",
+      "frame": {
+        "x": 0,
+        "y": 955,
+        "w": 14,
+        "h": 21
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 14,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "alex/148.png",
+      "frame": {
+        "x": 0,
+        "y": 386,
+        "w": 15,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 15,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  ],
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.6",
+    "image": "alex.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 31,
+      "h": 1018
+    },
+    "scale": 1
+  }
+}
