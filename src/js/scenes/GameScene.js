@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { Parser } from 'webpack';
 
 export default class GameScene extends Phaser.Scene {
     constructor() {
@@ -15,7 +16,8 @@ export default class GameScene extends Phaser.Scene {
         const wallsLayer = map.createLayer('walls', tileset, 0, 0);
         map.createLayer('floor', tileset, 0, 0);
 
-        wallsLayer.setCollisionByProperty({colides: true})
+        wallsLayer.setCollisionByProperty({ colides: true });
+
 
     }
 }
