@@ -62,10 +62,9 @@ export default class GameScene extends Phaser.Scene {
         this.cameras.main.startFollow(this.chamaquito, true)
     }
 
-    update(t = 1000, dt = 1000) {
+    update() {
         if (!this.cursors || !this.chamaquito) return;
         const speed = 100;
-        this.chamaquito.body.offset.x = 0;
         if (this.cursors.left?.isDown) {
             this.chamaquito.setVelocity(-speed, 0);
             this.chamaquito.anims.play('chamaquito-run-side', true);
@@ -75,12 +74,17 @@ export default class GameScene extends Phaser.Scene {
             this.chamaquito.setVelocity(speed, 0);
             this.chamaquito.anims.play('chamaquito-run-side', true);
             this.chamaquito.scaleX = 1;
+            this.chamaquito.body.offset.x = 0;
         } else if (this.cursors.up?.isDown) {
             this.chamaquito.setVelocity(0, -speed);
             this.chamaquito.anims.play('chamaquito-run-up', true);
+            this.chamaquito.scaleX = 1;
+            this.chamaquito.body.offset.x = 0;
         } else if (this.cursors.down?.isDown) {
             this.chamaquito.setVelocity(0, speed);
             this.chamaquito.anims.play('chamaquito-run-down', true);
+            this.chamaquito.scaleX = 1;
+            this.chamaquito.body.offset.x = 0;
         } else {
             this.chamaquito.setVelocity(0, 0);
             const lastAnim = this.chamaquito.anims.currentAnim.key.split('-');
