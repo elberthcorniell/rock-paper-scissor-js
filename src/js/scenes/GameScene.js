@@ -30,8 +30,8 @@ export default class GameScene extends Phaser.Scene {
         this.add.existing(this.message);
 
         
-        const object1 = this.add.image(160, 80, 'object1');
-        const object2 = this.add.image(160, 60, 'object2');
+        const object1 = this.add.image(280, 170, 'object1');
+        const object2 = this.add.image(400, 50, 'object2');
 
         this.events.emit('Message', 'Welcome');
     }
