@@ -70,10 +70,9 @@ export default class GameScene extends Phaser.Scene {
         zone.x = Phaser.Math.RND.between(0, this.physics.world.bounds.width);
         zone.y = Phaser.Math.RND.between(0, this.physics.world.bounds.height);
         this.cameras.main.shake(300);
+
         const battle = this.scene.get('battle');
-        if (battle.events._eventsCount > 3) {
-            battle.scene.restart()
-        }
+        // battle.startBattle();
         this.scene.switch('battle');
     }
 }

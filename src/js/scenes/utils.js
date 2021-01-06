@@ -225,7 +225,7 @@ export const Message = new Phaser.Class({
         events.on("Message", this.showMessage, this);
         this.visible = false;
     },
-    showMessage: function (text) {
+    showMessage: function (text = 'Hello') {
         try {
             this.text.setText(text);
             this.visible = true;
@@ -233,7 +233,7 @@ export const Message = new Phaser.Class({
                 this.hideEvent.remove(false);
             this.hideEvent = this.scene.time.addEvent({ delay: 2000, callback: this.hideMessage, callbackScope: this });
         } catch (e) {
-            console.log(e)
+            console.log(e.message);
         }
     },
     hideMessage: function () {

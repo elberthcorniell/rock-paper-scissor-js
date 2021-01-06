@@ -13,7 +13,7 @@ export default class BattleScene extends Phaser.Scene {
     create() {
         this.cameras.main.setBackgroundColor('rgba(0, 00, 0, 0.75)');
         this.startBattle();
-        this.sys.events.on('wake', this.startBattle, this);
+        this.sys.events.on('wake', () => this.startBattle(), this);
     }
 
     receiveSelectAction(action, enemyAction) {
@@ -57,6 +57,7 @@ export default class BattleScene extends Phaser.Scene {
 
         if (this.enemy.living)
             victory = false;
+
         let gameOver = true;
 
         if (this.player.living)
@@ -65,25 +66,20 @@ export default class BattleScene extends Phaser.Scene {
         return victory || gameOver;
     }
 
-    startBattle() {
+    startBattle(vs = 'alex') {
         this.player = new PlayerCharacter(this, 250, 50, 'player', 'character/000.png', 'Player', 100, 100);
         this.add.existing(this.player);
 
-        this.enemy = new Enemy(this, 50, 50, 'alex', 'alex/000.png', 'Alex', 100, 100);
+        this.enemy = new Enemy(this, 50, 50, vs, `${vs}/000.png`, vs, 100, 100);
         this.add.existing(this.enemy);
 
         this.units = [this.player, this.enemy];
         this.index = -1;
 
         const battleUI = this.scene.get('battleui');
-        if (battleUI.events._eventsCount > 3) {
-            battleUI.scene.restart()
-        } else {
-            this.scene.launch('battleui');
-        }
-
+        this.scene.launch('battleui');
+        // battleUI.scene.launch();
     }
-
 
     endBattle() {
         for (var i = 0; i < this.units.length; i++) {
@@ -98,16 +94,10 @@ export default class BattleScene extends Phaser.Scene {
     exitBattle() {
         this.scene.sleep('battleui');
         if (!this.player.living) {
-            this.scene.sleep('game')
-            this.scene.sleep('battle');
-            this.scene.launch('gameover');
-        } else {
+            this.scene.switch('gameover');
+        } else
             this.scene.switch('game');
-        }
-    }
 
-    wake() {
-        this.scene.run('battleui');
     }
 
 }

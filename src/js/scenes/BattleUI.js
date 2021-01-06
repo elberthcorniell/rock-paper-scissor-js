@@ -23,9 +23,25 @@ export default class BattleUI extends Phaser.Scene {
 
         this.loadMenus();
 
-        console.log('restarted')
+        this.battleScene = this.scene.get('battle');
+        console.log(this.battleScene.player.living, 'player living')
+        this.remapPlayer();
+        this.remapEnemies();
+
+        this.lastPlayerAction = 'rock';
+
+        if (!this.listeners) this.listeners = [
+            this.input.keyboard.on('keydown', this.onKeyInput, this),
+            this.battleScene.events.on("SelectAction", this.onSelectAction, this),
+            this.events.on("SelectEnemies", this.onSelectEnemies, this),
+            this.events.on("Enemy", this.onEnemy, this),
+        ]
+
+        this.message = new Message(this, this.battleScene.events);
+        this.add.existing(this.message);
 
         this.battleScene.nextTurn();
+
         this.sys.events.on('wake', this.loadMenus, this);
     }
 
@@ -83,21 +99,6 @@ export default class BattleUI extends Phaser.Scene {
         this.menus.add(this.actionsMenu);
         this.menus.add(this.enemiesMenu);
 
-        this.battleScene = this.scene.get('battle');
-        this.remapPlayer();
-        this.remapEnemies();
-
-        this.lastPlayerAction = 'rock';
-
-        this.listeners = [
-            this.input.keyboard.on('keydown', this.onKeyInput, this),
-            this.battleScene.events.on("SelectAction", this.onSelectAction, this),
-            this.events.on("SelectEnemies", this.onSelectEnemies, this),
-            this.events.on("Enemy", this.onEnemy, this),
-        ]
-
-        this.message = new Message(this, this.battleScene.events);
-        this.add.existing(this.message);
     }
 
 }

@@ -22,11 +22,8 @@ export default class EntryScene extends Phaser.Scene {
     }
 
     onKeyInput({ key }) {
-        if (key === 'Enter') {
-            const game = this.scene.get('game');
-            game.scene.restart();
+        if (key === 'Enter')
             this.scene.start('game');
-        }
     }
 
 
