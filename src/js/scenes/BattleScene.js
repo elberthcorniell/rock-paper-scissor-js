@@ -54,11 +54,16 @@ export default class BattleScene extends Phaser.Scene {
 
     checkEndBattle() {
         let victory = true;
+
         if (this.enemy.living)
             victory = false;
         let gameOver = true;
+
         if (this.player.living)
             gameOver = false;
+
+        if (gameOver)
+            this.scene.switch('gameover');
 
         return victory || gameOver;
     }

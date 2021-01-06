@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { EntryScene, GameScene, BattleScene, BattleUI } from './js/scenes'
+import { EntryScene, GameScene, BattleScene, BattleUI, GameOverScene } from './js/scenes'
 
 const game = new Phaser.Game({
   type: Phaser.AUTO,
@@ -16,7 +16,8 @@ const game = new Phaser.Game({
     EntryScene,
     GameScene,
     BattleScene,
-    BattleUI
+    BattleUI,
+    GameOverScene
   ],
   scale: {
     zoom: 2

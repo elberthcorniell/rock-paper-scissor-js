@@ -2,7 +2,7 @@ import Phaser from 'phaser';
 
 export default class EntryScene extends Phaser.Scene {
     constructor() {
-        super('preloader');
+        super('entry');
     }
 
     preload() {
@@ -14,8 +14,9 @@ export default class EntryScene extends Phaser.Scene {
     }
 
     create() {
-        const image = this.add.image(160, 50, 'title');
+        const image = this.add.image(160, 80, 'title');
         image.setScale(0.3, 0.3);
+        const text = this.add.text(120, 160, 'Press Enter', { color: '#ffffff', align: 'center', fontSize: 15 })
         this.input.keyboard.on('keydown', this.onKeyInput, this);
     }
 
