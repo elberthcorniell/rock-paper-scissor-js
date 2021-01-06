@@ -29,12 +29,11 @@ export default class GameScene extends Phaser.Scene {
         this.message = new Message(this, this.events);
         this.add.existing(this.message);
 
-        this.events.emit('Message', 'Welcome');
+        
+        const object1 = this.add.image(160, 80, 'object1');
+        const object2 = this.add.image(160, 60, 'object2');
 
-        this.score = this.add.text( 0, 0, "", { color: '#ffffff', align: 'center', fontSize: 13, wordWrap: { width: 160, useAdvancedWrap: true } });
-        this.score.setOrigin(0.5);
-        this.score.setText('Score: 0');
-        this.score.fixedToCamera = true;
+        this.events.emit('Message', 'Welcome');
     }
 
     update() {

@@ -277,9 +277,7 @@ export const Message = new Phaser.Class({
             if (this.hideEvent)
                 this.hideEvent.remove(false);
             this.hideEvent = this.scene.time.addEvent({ delay: 2000, callback: this.hideMessage, callbackScope: this });
-        } catch (e) {
-            console.log(e.message);
-        }
+        } catch (e) { }
     },
     hideMessage: function () {
         this.hideEvent = null;
@@ -288,7 +286,7 @@ export const Message = new Phaser.Class({
 });
 
 
-export const getScore = () =>  Number(localStorage.getItem('score') || 0);
+export const getScore = () => Number(localStorage.getItem('score') || 0);
 
 export const setScore = score => {
     const actual = getScore();
