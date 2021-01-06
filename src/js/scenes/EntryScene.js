@@ -11,6 +11,8 @@ export default class EntryScene extends Phaser.Scene {
         this.load.tilemapTiledJSON('room', '/src/map.json');
         this.load.atlas('player', '/src/images/character/texture.png', '/src/images/character/texture.json');
         this.load.atlas('alex', '/src/images/character/alex.png', '/src/images/character/alex.json');
+        this.load.atlas('amelia', '/src/images/character/amelia.png', '/src/images/character/amelia.json');
+        this.load.atlas('bob', '/src/images/character/bob.png', '/src/images/character/bob.json');
     }
 
     create() {
