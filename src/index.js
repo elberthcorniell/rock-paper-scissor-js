@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { Preloader, GameScene, BattleScene, BattleUI } from './js/scenes'
+import { EntryScene, GameScene, BattleScene, BattleUI } from './js/scenes'
 
 const game = new Phaser.Game({
   type: Phaser.AUTO,
@@ -13,7 +13,7 @@ const game = new Phaser.Game({
     }
   },
   scene: [
-    Preloader,
+    EntryScene,
     GameScene,
     BattleScene,
     BattleUI

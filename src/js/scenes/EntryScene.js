@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 
-export default class Preloader extends Phaser.Scene {
+export default class EntryScene extends Phaser.Scene {
     constructor(){
         super('preloader');
     }

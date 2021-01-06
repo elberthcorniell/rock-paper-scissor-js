@@ -43,7 +43,7 @@ export default class BattleScene extends Phaser.Scene {
 
         this.index += 1;
         if (this.index >= this.units.length)
-                this.index = 0;
+            this.index = 0;
 
         if (!this.units[this.index]) return;
         if (this.units[this.index] instanceof PlayerCharacter)
@@ -59,6 +59,7 @@ export default class BattleScene extends Phaser.Scene {
         let gameOver = true;
         if (this.player.living)
             gameOver = false;
+
         return victory || gameOver;
     }
 
