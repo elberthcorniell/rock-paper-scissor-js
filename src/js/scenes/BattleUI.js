@@ -11,6 +11,7 @@ export default class BattleUI extends Phaser.Scene {
     }
 
     create() {
+        // if (this.listeners) this.scene.restart()
 
         this.graphics = this.add.graphics();
         this.graphics.lineStyle(1, 0xffffff);
@@ -22,36 +23,17 @@ export default class BattleUI extends Phaser.Scene {
         this.graphics.strokeRect(188, 140, 130, 100);
         this.graphics.fillRect(188, 140, 130, 100);
 
-        this.menus = this.add.container();
+        this.loadMenus();
 
-        this.heroesMenu = new HeroesMenu(195, 153, this);
-        this.actionsMenu = new ActionsMenu(100, 153, this);
-        this.enemiesMenu = new EnemiesMenu(8, 153, this);
+        this.listeners = [
+            this.input.keyboard.on('keydown', this.onKeyInput, this),
+            this.battleScene.events.on("SelectAction", this.onSelectAction, this),
+            this.events.on("SelectEnemies", this.onSelectEnemies, this),
+            this.events.on("Enemy", this.onEnemy, this),
+        ]
 
-        // the currently selected menu 
-        this.currentMenu = this.actionsMenu;
-
-        // add menus to the container
-        this.menus.add(this.heroesMenu);
-        this.menus.add(this.actionsMenu);
-        this.menus.add(this.enemiesMenu);
-
-        this.battleScene = this.scene.get('battle');
-        this.remapPlayer();
-        this.remapEnemies();
-
-        this.lastPlayerAction = 'rock';
-
-        this.input.keyboard.on('keydown', this.onKeyInput, this);
-        this.battleScene.events.on("SelectAction", this.onSelectAction, this);
-        this.events.on("SelectEnemies", this.onSelectEnemies, this);
-        this.events.on("Enemy", this.onEnemy, this);
         this.battleScene.nextTurn();
-        
-        this.message = new Message(this, this.battleScene.events);
-        this.add.existing(this.message);
-
-
+        this.sys.events.on('wake', this.loadMenus, this);
     }
 
     onSelectAction(id) {
@@ -93,6 +75,29 @@ export default class BattleUI extends Phaser.Scene {
             this.currentMenu.moveSelectionDown();
         else if (event.code === "Space")
             this.currentMenu.confirm();
+    }
+
+    loadMenus() {
+        this.menus = this.add.container();
+
+        this.heroesMenu = new HeroesMenu(195, 153, this);
+        this.actionsMenu = new ActionsMenu(100, 153, this);
+        this.enemiesMenu = new EnemiesMenu(8, 153, this);
+
+        this.currentMenu = this.actionsMenu;
+
+        this.menus.add(this.heroesMenu);
+        this.menus.add(this.actionsMenu);
+        this.menus.add(this.enemiesMenu);
+
+        this.battleScene = this.scene.get('battle');
+        this.remapPlayer();
+        this.remapEnemies();
+
+        this.lastPlayerAction = 'rock';
+
+        this.message = new Message(this, this.battleScene.events);
+        this.add.existing(this.message);
     }
 
 }
