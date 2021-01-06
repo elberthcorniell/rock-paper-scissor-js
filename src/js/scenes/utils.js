@@ -296,7 +296,7 @@ export const setScore = score => {
 };
 
 export const resetScore = () => {
-    setScore(0)
+    localStorage.setItem('score', 0);
 };
 
 export const renderScore = () => {

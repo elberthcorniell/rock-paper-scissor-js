@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { renderScore, resetScore } from './utils';
 
 export default class EntryScene extends Phaser.Scene {
     constructor() {
@@ -24,8 +25,11 @@ export default class EntryScene extends Phaser.Scene {
     }
 
     onKeyInput({ key }) {
-        if (key === 'Enter')
+        if (key === 'Enter'){
             this.scene.start('game');
+            resetScore();
+            renderScore();
+        }
     }
 
 

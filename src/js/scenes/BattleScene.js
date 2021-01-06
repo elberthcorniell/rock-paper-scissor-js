@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { PlayerCharacter, Enemy, } from './utils'
+import { PlayerCharacter, Enemy, setScore, renderScore, } from './utils'
 
 export default class BattleScene extends Phaser.Scene {
     constructor() {
@@ -90,9 +90,11 @@ export default class BattleScene extends Phaser.Scene {
         for (var i = 0; i < this.units.length; i++) {
             this.units[i].destroy();
         }
-        this.enemyTexture.destroy()
-        this.enemy.destroy()
-        this.player.destroy()
+        this.enemyTexture.destroy();
+        this.enemy.destroy();
+        setScore(this.player.hp);
+        renderScore();
+        this.player.destroy();
         this.units.length = 0;
         this.exitBattle();
     }
