@@ -9,8 +9,8 @@ export default class GameOverScene extends Phaser.Scene {
     }
 
     create() {
-        this.add.text(120, 120, 'Game Over', { color: 'red', align: 'center', fontSize: 25 })
-        this.add.text(120, 160, 'Press Enter', { color: '#ffffff', align: 'center', fontSize: 15 })
+        this.add.text(100, 100, 'Game Over', { color: 'red', align: 'center', fontSize: 25, fontWeight: 'bold' })
+        this.add.text(120, 140, 'Press Enter', { color: '#ffffff', align: 'center', fontSize: 15 })
         this.input.keyboard.on('keydown', this.onKeyInput, this);
     }
 
