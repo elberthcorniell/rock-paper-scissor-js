@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { createNoPlayableCharacter, createPlayer, Message } from './utils';
+import { createNoPlayableCharacter, createPlayer, Message, renderScore, setScore } from './utils';
 
 export default class GameScene extends Phaser.Scene {
     constructor() {
@@ -29,9 +29,24 @@ export default class GameScene extends Phaser.Scene {
         this.message = new Message(this, this.events);
         this.add.existing(this.message);
 
-        
-        const object1 = this.add.image(280, 170, 'object1');
-        const object2 = this.add.image(400, 50, 'object2');
+
+        this.object1 = this.physics.add.image(280, 170, 'object1');
+        this.object2 = this.physics.add.image(400, 50, 'object2');
+
+        this.physics.add.overlap(this.player, this.object1, () => {
+            setScore(30);
+            renderScore();
+            this.events.emit('Message', 'Earth globe collected!')
+            this.object1.destroy();
+
+        }, false, this);
+
+        this.physics.add.overlap(this.player, this.object2, () => {
+            setScore(50);
+            renderScore();
+            this.events.emit('Message', 'Earth globe collected!')
+            this.object2.destroy();
+        }, false, this);
 
         this.events.emit('Message', 'Welcome');
     }
@@ -108,7 +123,7 @@ export default class GameScene extends Phaser.Scene {
             }
         }
 
-        if (y > 80 && y < 120 && x < 400 && x > 360) {
+        if (y > 80 && y < 120 && x < 380 && x > 360) {
             if (this.bob && !this.cantMove) {
                 try {
                     this.bob.setVelocity(0, speed);
