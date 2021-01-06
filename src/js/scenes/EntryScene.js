@@ -18,6 +18,7 @@ export default class EntryScene extends Phaser.Scene {
         image.setScale(0.3, 0.3);
         const text = this.add.text(120, 160, 'Press Enter', { color: '#ffffff', align: 'center', fontSize: 15 })
         this.input.keyboard.on('keydown', this.onKeyInput, this);
+        localStorage.setItem('player', JSON.stringify({ hp: 100 }));
     }
 
     onKeyInput({ key }) {
