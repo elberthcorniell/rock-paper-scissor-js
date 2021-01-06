@@ -5,6 +5,21 @@ canvas {
 
 body {
   display: flex;
+  flex-direction: column;
   align-items: center;
   background-color: #f3f5f7;
+  justify-content: center;
+  background-image: url(/src/images/background.jpg);
+  background-size: cover;
+}
+
+.score-board {
+  background-color: #f3f5f7;
+  border-radius: 5px;
+  width: 620px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
 }

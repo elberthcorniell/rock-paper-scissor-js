@@ -31,6 +31,10 @@ export default class GameScene extends Phaser.Scene {
 
         this.events.emit('Message', 'Welcome');
 
+        this.score = this.add.text( 0, 0, "", { color: '#ffffff', align: 'center', fontSize: 13, wordWrap: { width: 160, useAdvancedWrap: true } });
+        this.score.setOrigin(0.5);
+        this.score.setText('Score: 0');
+        this.score.fixedToCamera = true;
     }
 
     update() {
@@ -77,7 +81,7 @@ export default class GameScene extends Phaser.Scene {
     enemiesCheck() {
         const { x, y } = this.player;
         const speed = 75;
-        if (y < 120 && x < 144 && x > 112) {
+        if (y < 120 && x < 144 && x > 120) {
             if (this.alex && !this.cantMove) {
                 try {
                     this.alex.setVelocity(0, speed);

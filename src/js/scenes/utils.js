@@ -286,3 +286,20 @@ export const Message = new Phaser.Class({
         this.visible = false;
     }
 });
+
+
+export const getScore = () =>  Number(localStorage.getItem('score') || 0);
+
+export const setScore = score => {
+    const actual = getScore();
+    localStorage.setItem('score', actual + score);
+};
+
+export const resetScore = () => {
+    setScore(0)
+};
+
+export const renderScore = () => {
+    const score = document.getElementById('score');
+    score.innerHTML = getScore();
+}
