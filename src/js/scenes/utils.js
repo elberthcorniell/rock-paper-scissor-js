@@ -165,8 +165,8 @@ export const EnemiesMenu = new Phaser.Class({
     }
 });
 
-export const createPlayer = (_this, name, prefix = 'character') => {
-    _this.player = _this.physics.add.sprite(128, 128, name, `${prefix}/003.png`);
+export const createPlayer = (_this, name, prefix = 'character', x = 128, y = 128, playable = true) => {
+    _this.player = _this.physics.add.sprite(x, y, name, `${prefix}/003.png`);
     _this.player.body.setSize(_this.player.width, _this.player.height * 0.8);
     _this.player.body.offset.y = 8;
     _this.anims.create({
@@ -204,9 +204,16 @@ export const createPlayer = (_this, name, prefix = 'character') => {
         repeat: -1,
         frameRate: 10
     });
-
     _this.player.anims.play(`${name}-idle-down`);
+
     return _this.player;
+}
+
+export const createNoPlayableCharacter = (_this, name, prefix = 'character', x, y) => {
+    _this[name] = _this.physics.add.staticSprite(x, y, name, `${prefix}/003.png`);
+    _this[name].body.setSize(_this.player.width, _this.player.height * 0.8);
+    _this[name].body.offset.y = 0;
+    return _this[name];
 }
 
 export const Message = new Phaser.Class({

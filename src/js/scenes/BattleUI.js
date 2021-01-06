@@ -24,7 +24,6 @@ export default class BattleUI extends Phaser.Scene {
         this.loadMenus();
 
         this.battleScene = this.scene.get('battle');
-        console.log(this.battleScene.player.living, 'player living')
         this.remapPlayer();
         this.remapEnemies();
 

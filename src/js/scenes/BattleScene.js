@@ -28,7 +28,6 @@ export default class BattleScene extends Phaser.Scene {
             attacker = 0;
         else
             attacker = 1;
-        console.log('message')
         this.events.emit('Message', `${action} vs ${enemyAction}\n${attacker === null ? 'No body' : this.units[attacker === 0 ? 1 : 0].type} was damaged`)
 
         this.time.addEvent({ delay: 1000, callback: this.nextTurn, callbackScope: this });
@@ -66,12 +65,11 @@ export default class BattleScene extends Phaser.Scene {
         return victory || gameOver;
     }
 
-    startBattle(vs = 'alex') {
+    startBattle() {
         this.player = new PlayerCharacter(this, 250, 50, 'player', 'character/000.png', 'Player', 100, 100);
         this.add.existing(this.player);
 
-        this.enemy = new Enemy(this, 50, 50, vs, `${vs}/000.png`, vs, 100, 100);
-        this.add.existing(this.enemy);
+        if (!this.enemy) this.loadEnemy();
 
         this.units = [this.player, this.enemy];
         this.index = -1;
@@ -81,10 +79,18 @@ export default class BattleScene extends Phaser.Scene {
         // battleUI.scene.launch();
     }
 
+    loadEnemy(texture = {}) {
+        const { texture: { key: vs = 'alex' } } = texture;
+        this.enemyTexture = texture
+        this.enemy = new Enemy(this, 50, 50, vs, `${vs}/000.png`, vs, 100, 100);
+        this.add.existing(this.enemy);
+    }
+
     endBattle() {
         for (var i = 0; i < this.units.length; i++) {
             this.units[i].destroy();
         }
+        this.enemyTexture.destroy()
         this.enemy.destroy()
         this.player.destroy()
         this.units.length = 0;
