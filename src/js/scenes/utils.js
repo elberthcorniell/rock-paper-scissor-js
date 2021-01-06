@@ -210,9 +210,47 @@ export const createPlayer = (_this, name, prefix = 'character', x = 128, y = 128
 }
 
 export const createNoPlayableCharacter = (_this, name, prefix = 'character', x, y) => {
-    _this[name] = _this.physics.add.staticSprite(x, y, name, `${prefix}/003.png`);
+    _this[name] = _this.physics.add.sprite(x, y, name, `${prefix}/003.png`);
     _this[name].body.setSize(_this.player.width, _this.player.height * 0.8);
     _this[name].body.offset.y = 0;
+
+    _this.anims.create({
+        key: `${name}-idle-side`,
+        frames: [{ key: name, frame: `${prefix}/000.png` }]
+    });
+
+    _this.anims.create({
+        key: `${name}-idle-up`,
+        frames: [{ key: name, frame: `${prefix}/001.png` }]
+    })
+
+    _this.anims.create({
+        key: `${name}-idle-down`,
+        frames: [{ key: name, frame: `${prefix}/003.png` }]
+    })
+
+    _this.anims.create({
+        key: `${name}-run-down`,
+        frames: _this.anims.generateFrameNames(name, { start: 66, end: 71, prefix: `${prefix}/0`, suffix: '.png' }),
+        repeat: -1,
+        frameRate: 10
+    });
+
+    _this.anims.create({
+        key: `${name}-run-up`,
+        frames: _this.anims.generateFrameNames(name, { start: 54, end: 59, prefix: `${prefix}/0`, suffix: '.png' }),
+        repeat: -1,
+        frameRate: 10
+    });
+
+    _this.anims.create({
+        key: `${name}-run-side`,
+        frames: _this.anims.generateFrameNames(name, { start: 48, end: 53, prefix: `${prefix}/0`, suffix: '.png' }),
+        repeat: -1,
+        frameRate: 10
+    });
+    _this[name].anims.play(`${name}-idle-down`);
+
     return _this[name];
 }
 
