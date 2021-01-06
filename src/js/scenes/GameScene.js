@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { createNoPlayableCharacter, createPlayer } from './utils';
+import { createNoPlayableCharacter, createPlayer, Message } from './utils';
 
 export default class GameScene extends Phaser.Scene {
     constructor() {
@@ -13,28 +13,24 @@ export default class GameScene extends Phaser.Scene {
     create() {
         const map = this.make.tilemap({ key: 'room' });
         const tileset = map.addTilesetImage('Tileset_16x16_1', 'tiles');
-        const wallsLayer = map.createLayer('walls', tileset, 0, 0);
         map.createLayer('floor', tileset, 0, 0);
+        const wallsLayer = map.createLayer('walls', tileset, 0, 0);
 
         wallsLayer.setCollisionByProperty({ colides: true });
-
         this.player = createPlayer(this, 'player');
-        this.alex = createNoPlayableCharacter(this, 'alex', 'alex', 128, 40);
-
-
         this.physics.add.collider(this.player, wallsLayer);
-        this.physics.add.collider(this.player, this.alex, this.onMeetEnemy, false, this);
 
-        this.cameras.main.startFollow(this.player, true)
+        this.addEnemy('alex');
+        this.addEnemy('amelia', 180, 220);
+        this.addEnemy('bob', 380, 40);
+        
+        this.cameras.main.startFollow(this.player, true);
 
-        // this.spawns = this.physics.add.group({ classType: Phaser.GameObjects.Zone });
-        // for (let i = 0; i < 10; i++) {
-        //     let x = Phaser.Math.RND.between(0, this.physics.world.bounds.width);
-        //     let y = Phaser.Math.RND.between(0, this.physics.world.bounds.height);
-        //     // parameters are x, y, width, height
-        //     this.spawns.create(x, y, 20, 20);
-        // }
-        // this.physics.add.overlap(this.player, this.spawns, this.onMeetEnemy, false, this);
+        this.message = new Message(this, this.events);
+        this.add.existing(this.message);
+
+        this.events.emit('Message', 'klok')
+
     }
 
     update() {
@@ -68,9 +64,13 @@ export default class GameScene extends Phaser.Scene {
         }
     }
 
+    addEnemy(name, x = 128, y = 40){
+        this[name] = createNoPlayableCharacter(this, name, name, x, y);
+        this.physics.add.collider(this.player, this[name], this.onMeetEnemy, false, this);
+    }
+
     onMeetEnemy(player, enemy) {
         this.cameras.main.shake(300);
-        console.log(enemy)
         const battle = this.scene.get('battle');
         battle.loadEnemy(enemy);
         this.scene.switch('battle');
