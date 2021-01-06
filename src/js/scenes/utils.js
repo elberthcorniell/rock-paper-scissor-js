@@ -169,7 +169,6 @@ export const createPlayer = (_this, name, prefix = 'character') => {
     _this.player = _this.physics.add.sprite(128, 128, name, `${prefix}/003.png`);
     _this.player.body.setSize(_this.player.width, _this.player.height * 0.8);
     _this.player.body.offset.y = 8;
-
     _this.anims.create({
         key: `${name}-idle-side`,
         frames: [{ key: name, frame: `${prefix}/000.png` }]
@@ -227,11 +226,15 @@ export const Message = new Phaser.Class({
         this.visible = false;
     },
     showMessage: function (text) {
-        this.text.setText(text);
-        this.visible = true;
-        if (this.hideEvent)
-            this.hideEvent.remove(false);
-        this.hideEvent = this.scene.time.addEvent({ delay: 2000, callback: this.hideMessage, callbackScope: this });
+        try {
+            this.text.setText(text);
+            this.visible = true;
+            if (this.hideEvent)
+                this.hideEvent.remove(false);
+            this.hideEvent = this.scene.time.addEvent({ delay: 2000, callback: this.hideMessage, callbackScope: this });
+        } catch (e) {
+            console.log(e)
+        }
     },
     hideMessage: function () {
         this.hideEvent = null;
