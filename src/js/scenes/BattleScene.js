@@ -28,8 +28,8 @@ export default class BattleScene extends Phaser.Scene {
             attacker = 0;
         else
             attacker = 1;
-
-        this.events.emit('Message', `${action} vs ${enemyAction}\n${attacker === null ? 'No body' : this.units[attacker].type} was damaged`)
+        console.log('message')
+        this.events.emit('Message', `${action} vs ${enemyAction}\n${attacker === null ? 'No body' : this.units[attacker === 0 ? 1 : 0].type} was damaged`)
 
         this.time.addEvent({ delay: 1000, callback: this.nextTurn, callbackScope: this });
         attacker !== null && this.units[attacker].attack(this.units[attacker == 0 ? 1 : 0]);
@@ -62,24 +62,26 @@ export default class BattleScene extends Phaser.Scene {
         if (this.player.living)
             gameOver = false;
 
-        if (gameOver)
-            this.scene.switch('gameover');
-
         return victory || gameOver;
     }
 
     startBattle() {
-
-        this.player = new PlayerCharacter(this, 250, 50, 'player', 'character/000.png', 'Player', 100, 40);
+        this.player = new PlayerCharacter(this, 250, 50, 'player', 'character/000.png', 'Player', 100, 100);
         this.add.existing(this.player);
 
-        this.enemy = new Enemy(this, 50, 50, 'alex', 'alex/000.png', 'Alex', 100, 40);
+        this.enemy = new Enemy(this, 50, 50, 'alex', 'alex/000.png', 'Alex', 100, 100);
         this.add.existing(this.enemy);
 
         this.units = [this.player, this.enemy];
-
-        this.scene.launch('battleui');
         this.index = -1;
+
+        const battleUI = this.scene.get('battleui');
+        if (battleUI.events._eventsCount > 3) {
+            battleUI.scene.restart()
+        } else {
+            this.scene.launch('battleui');
+        }
+
     }
 
 
@@ -87,19 +89,25 @@ export default class BattleScene extends Phaser.Scene {
         for (var i = 0; i < this.units.length; i++) {
             this.units[i].destroy();
         }
+        this.enemy.destroy()
+        this.player.destroy()
         this.units.length = 0;
-        this.scene.sleep('battleui');
-        this.scene.switch('game');
+        this.exitBattle();
     }
 
     exitBattle() {
         this.scene.sleep('battleui');
-        this.scene.switch('game');
+        if (!this.player.living) {
+            this.scene.sleep('game')
+            this.scene.sleep('battle');
+            this.scene.launch('gameover');
+        } else {
+            this.scene.switch('game');
+        }
     }
 
     wake() {
         this.scene.run('battleui');
-        this.time.addEvent({ delay: 2000, callback: this.exitBattle, callbackScope: this });
     }
 
 }

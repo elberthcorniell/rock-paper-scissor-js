@@ -21,14 +21,14 @@ export default class GameScene extends Phaser.Scene {
 
         this.player = createPlayer(this, 'player');
 
-        
+
         this.physics.add.collider(this.player, wallsLayer);
         this.cameras.main.startFollow(this.player, true)
 
         this.spawns = this.physics.add.group({ classType: Phaser.GameObjects.Zone });
-        for (var i = 0; i < 10; i++) {
-            var x = Phaser.Math.RND.between(0, this.physics.world.bounds.width);
-            var y = Phaser.Math.RND.between(0, this.physics.world.bounds.height);
+        for (let i = 0; i < 10; i++) {
+            let x = Phaser.Math.RND.between(0, this.physics.world.bounds.width);
+            let y = Phaser.Math.RND.between(0, this.physics.world.bounds.height);
             // parameters are x, y, width, height
             this.spawns.create(x, y, 20, 20);
         }
@@ -70,6 +70,10 @@ export default class GameScene extends Phaser.Scene {
         zone.x = Phaser.Math.RND.between(0, this.physics.world.bounds.width);
         zone.y = Phaser.Math.RND.between(0, this.physics.world.bounds.height);
         this.cameras.main.shake(300);
+        const battle = this.scene.get('battle');
+        if (battle.events._eventsCount > 3) {
+            battle.scene.restart()
+        }
         this.scene.switch('battle');
     }
 }

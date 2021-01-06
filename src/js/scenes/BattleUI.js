@@ -11,8 +11,6 @@ export default class BattleUI extends Phaser.Scene {
     }
 
     create() {
-        // if (this.listeners) this.scene.restart()
-
         this.graphics = this.add.graphics();
         this.graphics.lineStyle(1, 0xffffff);
         this.graphics.fillStyle(0x031f4c, 1);
@@ -25,12 +23,7 @@ export default class BattleUI extends Phaser.Scene {
 
         this.loadMenus();
 
-        this.listeners = [
-            this.input.keyboard.on('keydown', this.onKeyInput, this),
-            this.battleScene.events.on("SelectAction", this.onSelectAction, this),
-            this.events.on("SelectEnemies", this.onSelectEnemies, this),
-            this.events.on("Enemy", this.onEnemy, this),
-        ]
+        console.log('restarted')
 
         this.battleScene.nextTurn();
         this.sys.events.on('wake', this.loadMenus, this);
@@ -95,6 +88,13 @@ export default class BattleUI extends Phaser.Scene {
         this.remapEnemies();
 
         this.lastPlayerAction = 'rock';
+
+        this.listeners = [
+            this.input.keyboard.on('keydown', this.onKeyInput, this),
+            this.battleScene.events.on("SelectAction", this.onSelectAction, this),
+            this.events.on("SelectEnemies", this.onSelectEnemies, this),
+            this.events.on("Enemy", this.onEnemy, this),
+        ]
 
         this.message = new Message(this, this.battleScene.events);
         this.add.existing(this.message);
