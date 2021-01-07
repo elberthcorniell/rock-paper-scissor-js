@@ -353,18 +353,16 @@ export const renderLeaderBoard = async () => {
   board.className = 'leader-board';
   board.id = 'leader-board';
 
-  board.innerHTML = '<h2>Leaderboard</h2><br>';
-
-  const leaders = await getLeaderBoard();
-  leaders?.result?.map(data => {
-    const { user, score } = data;
-    board.innerHTML = board.innerHTML +
-    `<div class="score-board"
-      style="width: calc(100% - 20px);">
-      <strong>${user}:</strong>
-      <strong>${score} points</strong>
-      </div>`;
-  })
+  // const leaders = await getLeaderBoard();
+  // leaders?.result?.map(data => {
+  //   const { user, score } = data;
+  //   board.innerHTML = '<h2>Leaderboard</h2><br>'
+  //     + '<div class="score-board"'
+  //     + 'style="width: calc(100% - 20px);">'
+  //     + '<strong>' + user + ':</strong>'
+  //     + '<strong>' + score + ' points</strong>'
+  //     + '</div>';
+  // })
 
   document.getElementsByTagName('body')[0].appendChild(board);
 };
