@@ -14,12 +14,30 @@ body {
 }
 
 .score-board {
-  background-color: #f3f5f7;
+  background-color: white;
   border-radius: 5px;
   width: 620px;
   padding: 10px;
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
+  font-size: 24px;
+}
+
+input {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  width: 620px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.leader-board {
+  background-color: white;
+  border-radius: 5px;
+  width: 620px;
+  padding: 10px;
+  margin-top: 10px;
   font-size: 24px;
 }

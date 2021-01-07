@@ -123,7 +123,7 @@ export default class GameScene extends Phaser.Scene {
             }
         }
 
-        if (y > 80 && y < 120 && x < 380 && x > 360) {
+        if (y > 80 && y < 120 && x < 390 && x > 360) {
             if (this.bob && !this.cantMove) {
                 try {
                     this.bob.setVelocity(0, speed);

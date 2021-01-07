@@ -301,3 +301,52 @@ export const renderScore = () => {
     const score = document.getElementById('score');
     score.innerHTML = getScore();
 }
+
+const gameID = "Ki3KnVNMxxK38BleJpHR";
+
+export const getLeaderBoard = async () => {
+    let data = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`);
+    return await data.json();
+}
+
+export const addScoreToLeaderBoard = async (user, score) => {
+    try {
+        await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`, {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                user,
+                score: Number(score)
+            })
+        });
+        return true
+    } catch (e) {
+        return false
+    }
+}
+
+export const renderLeaderBoard = async () => {
+    let board = document.getElementById('leader-board');
+    if (board)
+        board.remove();
+
+    board = document.createElement('div');
+    board.className = 'leader-board';
+    board.id = 'leader-board';
+
+    board.innerHTML = `
+    <h2>Leaderboard</h2><br>
+    ${(await getLeaderBoard()).result?.map(data => {
+        const { user, score } = data;
+        return `<div class="score-board" style="width: calc(100% - 20px);">
+        <strong>${user}:</strong>
+        <strong>${score} points</strong>
+        </div>`
+    })}
+    `
+
+    document.getElementsByTagName('body')[0].appendChild(board);
+}
