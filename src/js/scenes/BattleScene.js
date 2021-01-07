@@ -66,7 +66,7 @@ export default class BattleScene extends Phaser.Scene {
     }
 
     startBattle() {
-        this.player = new PlayerCharacter(this, 250, 50, 'player', 'character/000.png', 'Player', 100, 100);
+        this.player = new PlayerCharacter(this, 250, 50, 'player', 'character/000.png', 'Player', 100, 34);
         this.add.existing(this.player);
 
         if (!this.enemy) this.loadEnemy();
@@ -82,7 +82,7 @@ export default class BattleScene extends Phaser.Scene {
     loadEnemy(texture = {}) {
         const { texture: { key: vs = 'alex' } } = texture;
         this.enemyTexture = texture
-        this.enemy = new Enemy(this, 50, 50, vs, `${vs}/000.png`, vs, 100, 100);
+        this.enemy = new Enemy(this, 50, 50, vs, `${vs}/000.png`, vs, 100, vs == 'bob' ? 60 : 34);
         this.add.existing(this.enemy);
     }
 
