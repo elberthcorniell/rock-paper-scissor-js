@@ -101,11 +101,10 @@ export default class BattleScene extends Phaser.Scene {
 
     exitBattle() {
         this.scene.sleep('battleui');
-        if (!this.player.living) {
+        if (!this.player.living || this.enemy.type == 'bob') {
             this.scene.switch('gameover');
         } else
             this.scene.switch('game');
-
     }
 
 }
