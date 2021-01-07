@@ -1,8 +1,12 @@
-import { getLeaderBoard, getScore, renderLeaderBoard, renderScore, resetScore, setScore } from '../src/js/scenes/utils';
+import {
+  getLeaderBoard, getScore, renderLeaderBoard, renderScore, resetScore, setScore,
+} from '../src/js/scenes/utils';
 import './utils';
 
 describe('Phaser utils,', () => {
-  document.body.innerHTML = '<div id="content"></div>';
+  document.body.innerHTML = `<div id="content">
+  <strong id="score">0</strong>
+  </div>`;
 
   test('Gets score of type number', () => {
     const score = getScore();
@@ -19,20 +23,24 @@ describe('Phaser utils,', () => {
     resetScore();
     const score = getScore();
     expect(score).not.toBe(20);
-  })
+  });
+
+  test('Successfully renders score', () => {
+    renderScore();
+    const score = document.getElementById('score').innerHTML;
+    expect(Number(score)).toBe(getScore());
+  });
 
   test('Successfully gets leader board', () => {
     getLeaderBoard().then(data => {
       const { result } = data;
       expect(typeof result).toBe('array');
-      done();
-    })
-  })
+    });
+  });
 
   test('Does not have an undefined leader board after rendering', () => {
     renderLeaderBoard();
     const leaderBoard = document.getElementById('leader-board');
     expect(leaderBoard).not.toBe(undefined);
-  })
-
+  });
 });

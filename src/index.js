@@ -1,5 +1,7 @@
 import Phaser from 'phaser';
-import { EntryScene, GameScene, BattleScene, BattleUI, GameOverScene } from './js/scenes'
+import {
+  EntryScene, GameScene, BattleScene, BattleUI, GameOverScene,
+} from './js/scenes';
 
 const game = new Phaser.Game({
   type: Phaser.AUTO,
@@ -9,16 +11,18 @@ const game = new Phaser.Game({
     default: 'arcade',
     arcade: {
       gravity: { y: 0 },
-    }
+    },
   },
   scene: [
     EntryScene,
     GameScene,
     BattleScene,
     BattleUI,
-    GameOverScene
+    GameOverScene,
   ],
   scale: {
-    zoom: 2
-  }
-})
+    zoom: 2,
+  },
+});
+
+export default game;
