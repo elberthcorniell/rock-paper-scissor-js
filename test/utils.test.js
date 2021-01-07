@@ -1,25 +1,38 @@
-import Tasks from '../src/js/layout/tasks';
+import { getLeaderBoard, getScore, renderLeaderBoard, renderScore, resetScore, setScore } from '../src/js/scenes/utils';
+import './utils';
 
-describe('Tasks handler,', () => {
+describe('Phaser utils,', () => {
   document.body.innerHTML = '<div id="content"></div>';
-  Tasks();
 
-  test('Creates a button for new Tasks', () => {
-    const link = document.getElementsByTagName('button');
-    for (let i = 0; i < link.length; i += 1) {
-      if (link[i].innerHTML === 'New Task') {
-        expect(link[i].innerHTML).toBe('New Task');
-      }
-    }
+  test('Gets score of type number', () => {
+    const score = getScore();
+    expect(typeof score).toBe('number');
   });
 
-  test('Creates a new Task form with no more than 6 inputs', () => {
-    const link = document.getElementById('newTaskForm');
-    expect(link.length > 6).not.toBe(true);
+  test('Adds score to actual score', () => {
+    setScore(20);
+    const score = getScore();
+    expect(score).toBe(20);
   });
 
-  test('Creates a modal for new Task', () => {
-    const link = document.getElementsByClassName('modal fade');
-    expect(link[0].id).toBe(('newTaskModal'));
-  });
+  test('Successfully resets score', () => {
+    resetScore();
+    const score = getScore();
+    expect(score).not.toBe(20);
+  })
+
+  test('Successfully gets leader board', () => {
+    getLeaderBoard().then(data => {
+      const { result } = data;
+      expect(typeof result).toBe('array');
+      done();
+    })
+  })
+
+  test('Does not have an undefined leader board after rendering', () => {
+    renderLeaderBoard();
+    const leaderBoard = document.getElementById('leader-board');
+    expect(leaderBoard).not.toBe(undefined);
+  })
+
 });

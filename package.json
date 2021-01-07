@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "task-manager-js"
+    "url": "rock-paper-scissors-js"
   },
   "keywords": [
     "Task",
@@ -27,6 +27,8 @@
     "webpack-cli": "^4.3.0"
   },
   "dependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.12.7",
+    "@babel/plugin-transform-runtime": "^7.12.10",
     "babel-eslint": "^10.1.0",
     "crypto-browserify": "^3.12.0",
     "eslint": "^7.16.0",
@@ -34,8 +36,8 @@
     "eslint-plugin-import": "^2.22.1",
     "https-browserify": "^1.0.0",
     "jest": "^26.6.3",
+    "jest-canvas-mock": "^2.3.0",
     "phaser": "^3.50.1",
-    "phaser-tiled-json-external-loader": "^0.1.0",
     "stream-http": "^3.1.1",
     "vm-browserify": "^1.1.2"
   }

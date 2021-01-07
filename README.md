@@ -13,7 +13,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://raw.githack.com/elberthcorniell/rock-paper-scissors-js/rock-paper-scissors/dist/index.html)
+[Live Demo Link](https://raw.githack.com/elberthcorniell/rock-paper-scissor-js/game-creation/dist/index.html)
 
 ## Game descrption
 
