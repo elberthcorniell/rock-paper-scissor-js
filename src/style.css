@@ -1,50 +1,43 @@
-h1 {
-  font-family: 'Pacifico', cursive;
-  font-size: 70px;
+canvas {
+  margin: auto;
+  border-radius: 5px;
 }
 
-button {
-  display: inline;
-  margin: 20px 10px 20px 0;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f3f5f7;
+  justify-content: center;
+  background-image: url(../src/images/background.jpg);
+  background-size: cover;
 }
 
-a {
-  margin-right: 10px;
-}
-
-nav {
-  height: 50px;
+.score-board {
+  background-color: white;
+  border-radius: 5px;
+  width: 620px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
 }
 
 input {
-  display: block;
-  margin-top: 10px;
-  width: 100%;
-  padding: 0 10px;
-  height: 40px;
+  background-color: white;
   border: none;
   border-radius: 5px;
-  font-weight: bold;
-  background-color: #f3f5f7;
+  width: 620px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
-input[type=submit] {
-  background-color: green;
-  color: white;
-}
-
-.home {
-  background-image: url("./images/tuna-salad.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 40px;
-  height: calc(100vh - 50px);
-}
-
-.home-title {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 50vw;
+.leader-board {
+  background-color: white;
+  border-radius: 5px;
+  width: 620px;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 24px;
 }
