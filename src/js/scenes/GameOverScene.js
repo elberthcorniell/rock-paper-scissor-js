@@ -14,7 +14,7 @@ export default class GameOverScene extends Phaser.Scene {
     this.add.text(90, 40, 'Game Over', { color: 'red', align: 'center', fontSize: 25 });
     this.scoreBoard = this.add.text(120, 60, `Score: ${getScore()}`, { color: '#ffffff', align: 'center', fontSize: 15 });
     this.renderLeaders();
-    this.add.text(120, 180, 'Press Enter', { color: '#ffffff', align: 'center', fontSize: 15 });
+    this.add.text(120, 200, 'Press Enter', { color: '#ffffff', align: 'center', fontSize: 15 });
     this.input.keyboard.on('keydown', this.onKeyInput, this);
 
     this.sys.events.on('wake', () => {
@@ -26,19 +26,19 @@ export default class GameOverScene extends Phaser.Scene {
   renderLeaders() {
     (async () => {
       const leaders = await getLeaderBoard();
-      leaders?.map((leader, index) => {
-        const { user, score } = leader;
-        if (this.leaders[`${user}+${index}`])
-          this.leaders[`${user}+${index}`].setText(`${user}......${score} points`);
-        else
+      for (let index; index < leaders.length; index += 1) {
+        const { user, score } = leaders[index];
+        if (this.leaders[`${user}+${index}`]) this.leaders[`${user}+${index}`].setText(`${user}......${score} points`);
+        else {
           this.leaders[`${user}+${index}`] = this.add.text(60, 80 + (index * 20),
             `${user}......${score} points`,
             {
               color: '#ffffff',
               align: 'center',
-              fontSize: 15
+              fontSize: 15,
             });
-      })
+        }
+      }
     })();
   }
 

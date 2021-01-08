@@ -1,5 +1,5 @@
 import {
-  getLeaderBoard, getScore, renderLeaderBoard, renderScore, resetScore, setScore,
+  getLeaderBoard, getScore, renderScore, resetScore, setScore,
 } from '../src/js/scenes/utils';
 import './utils';
 
@@ -36,11 +36,5 @@ describe('Phaser utils,', () => {
       const { result } = data;
       expect(typeof result).toBe('array');
     });
-  });
-
-  test('Does not have an undefined leader board after rendering', () => {
-    renderLeaderBoard();
-    const leaderBoard = document.getElementById('leader-board');
-    expect(leaderBoard).not.toBe(undefined);
   });
 });

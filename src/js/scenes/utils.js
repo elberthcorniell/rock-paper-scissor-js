@@ -321,11 +321,9 @@ export const renderScore = () => {
 const gameID = 'Ki3KnVNMxxK38BleJpHR';
 
 export const getLeaderBoard = async () => {
-  let data = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`);
-  let { result } = await data.json();
-  result.sort((a, b) => {
-    return b.score - a.score;
-  })
+  const data = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`);
+  const { result } = await data.json();
+  result.sort((a, b) => b.score - a.score);
   return result.slice(0, 5);
 };
 
