@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { renderLeaderBoard, renderScore, resetScore } from './utils';
+import { renderScore, resetScore } from './utils';
 
 export default class EntryScene extends Phaser.Scene {
   constructor() {
@@ -23,7 +23,6 @@ export default class EntryScene extends Phaser.Scene {
     image.setScale(0.3, 0.3);
     this.add.text(120, 160, 'Press Enter', { color: '#ffffff', align: 'center', fontSize: 15 });
     this.input.keyboard.on('keydown', this.onKeyInput, this);
-    renderLeaderBoard();
   }
 
   onKeyInput({ key }) {

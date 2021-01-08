@@ -15,13 +15,30 @@
 
 [Live Demo Link](https://raw.githack.com/elberthcorniell/rock-paper-scissor-js/game-creation/dist/index.html)
 
-## Game descrption
+## Game description
 
-You will be in a big room with 3 guys. The will challenge you to roc, paper, scissors battles.
+You will be in a big room with 3 guys. The will challenge you to rock, paper, scissors battles.
 
 Every time you start a battle, the first one to win 3 rounds wins. If you loose, is Game Over.
 
 Be careful with last guy, Bob, he is the final boss and he can win just with 2 rounds.
+
+### How to play
+
+- Movement: 
+⬆️ move up,
+⬇️ move down,
+⬅️ move left,
+➡️ move right
+
+- Selection:
+[ Space bar ]
+
+- Start a battle:
+Enemie will start the battle as soon as they see you.
+
+- Start game
+[ Enter ]
 
 ### How to earn points
 
@@ -30,6 +47,10 @@ Be careful with last guy, Bob, he is the final boss and he can win just with 2 r
     If you loose 0 rounds you will get 100 points.
     If you loose 1 rounds you will get 66 points.
     If you loose 2 rounds you will get 32 points.
+
+### Leaderboard
+
+- Every time the game is over you will see the top 5 leaderboard (And hopefully you will be there!). 
 
 ## Getting Started
 

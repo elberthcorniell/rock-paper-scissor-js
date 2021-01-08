@@ -322,8 +322,11 @@ const gameID = 'Ki3KnVNMxxK38BleJpHR';
 
 export const getLeaderBoard = async () => {
   let data = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`);
-  data = await data.json();
-  return data;
+  let { result } = await data.json();
+  result.sort((a, b) => {
+    return b.score - a.score;
+  })
+  return result.slice(0, 5);
 };
 
 export const addScoreToLeaderBoard = async (user, score) => {
@@ -343,26 +346,4 @@ export const addScoreToLeaderBoard = async (user, score) => {
   } catch (e) {
     return false;
   }
-};
-
-export const renderLeaderBoard = async () => {
-  let board = document.getElementById('leader-board');
-  if (board) { board.remove(); }
-
-  board = document.createElement('div');
-  board.className = 'leader-board';
-  board.id = 'leader-board';
-
-  // const leaders = await getLeaderBoard();
-  // leaders?.result?.map(data => {
-  //   const { user, score } = data;
-  //   board.innerHTML = '<h2>Leaderboard</h2><br>'
-  //     + '<div class="score-board"'
-  //     + 'style="width: calc(100% - 20px);">'
-  //     + '<strong>' + user + ':</strong>'
-  //     + '<strong>' + score + ' points</strong>'
-  //     + '</div>';
-  // })
-
-  document.getElementsByTagName('body')[0].appendChild(board);
 };

@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { addScoreToLeaderBoard, getScore } from './utils';
+import { addScoreToLeaderBoard, getLeaderBoard, getScore } from './utils';
 
 export default class GameOverScene extends Phaser.Scene {
   constructor() {
@@ -10,13 +10,36 @@ export default class GameOverScene extends Phaser.Scene {
     const score = getScore();
     const name = document.getElementById('name').value;
     if (score > 0 && name) addScoreToLeaderBoard(name, score);
-
-    this.add.text(100, 80, 'Game Over', { color: 'red', align: 'center', fontSize: 25 });
-    this.scoreBoard = this.add.text(120, 120, `Score: ${getScore()}`, { color: '#ffffff', align: 'center', fontSize: 15 });
-    this.add.text(120, 140, 'Press Enter', { color: '#ffffff', align: 'center', fontSize: 15 });
+    this.leaders = [];
+    this.add.text(90, 40, 'Game Over', { color: 'red', align: 'center', fontSize: 25 });
+    this.scoreBoard = this.add.text(120, 60, `Score: ${getScore()}`, { color: '#ffffff', align: 'center', fontSize: 15 });
+    this.renderLeaders();
+    this.add.text(120, 180, 'Press Enter', { color: '#ffffff', align: 'center', fontSize: 15 });
     this.input.keyboard.on('keydown', this.onKeyInput, this);
 
-    this.sys.events.on('wake', () => { this.scoreBoard.setText(`Score: ${getScore()}`); }, this);
+    this.sys.events.on('wake', () => {
+      this.scoreBoard.setText(`Score: ${getScore()}`);
+      this.renderLeaders();
+    }, this);
+  }
+
+  renderLeaders() {
+    (async () => {
+      const leaders = await getLeaderBoard();
+      leaders?.map((leader, index) => {
+        const { user, score } = leader;
+        if (this.leaders[`${user}+${index}`])
+          this.leaders[`${user}+${index}`].setText(`${user}......${score} points`);
+        else
+          this.leaders[`${user}+${index}`] = this.add.text(60, 80 + (index * 20),
+            `${user}......${score} points`,
+            {
+              color: '#ffffff',
+              align: 'center',
+              fontSize: 15
+            });
+      })
+    })();
   }
 
   onKeyInput({ key }) {
