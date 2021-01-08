@@ -135,7 +135,7 @@ export default class GameScene extends Phaser.Scene {
         } catch (e) { return e; }
       }
     }
-    return true;
+    return false;
   }
 
   addEnemy(name, x = 128, y = 40) {
