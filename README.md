@@ -1,4 +1,4 @@
-# Rock, Pape, Scissors Js - RPG Game
+# Rock, Paper, Scissors Js - RPG Game
 
 > A rpg turn based game for Rock, Paper and Scissors. Built with Javascript and the Phaser library.
 
